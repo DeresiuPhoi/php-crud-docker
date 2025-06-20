@@ -1,0 +1,16 @@
+# ОС
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# PHP
+vendor/
+*.log
+
+# Docker
+*.pid
+*.sock
+.env
