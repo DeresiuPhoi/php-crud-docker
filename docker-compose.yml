@@ -1,4 +1,4 @@
-
+version: "3.8"
 
 services:
   web:
@@ -11,17 +11,15 @@ services:
       - db
 
   db:
+    container_name: crud-db-1
     image: mysql:5.7
-    container_name: crud_db
+    platform: linux/amd64
     restart: always
     environment:
-      MYSQL_DATABASE: crud_db
+      MYSQL_DATABASE: crud
       MYSQL_ROOT_PASSWORD: root
-    ports:
-      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
-      - ./init:/docker-entrypoint-initdb.d
 
 volumes:
   db_data:

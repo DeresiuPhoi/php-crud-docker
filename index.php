@@ -1,7 +1,10 @@
 <?php
-require_once 'config/connect.php';
-if (!isset($connect)) {
-    die('Подключение к БД не установлено!');
+
+//require_once 'config/connect.php';
+$connect = mysqli_connect('db', 'root', 'root', 'crud');
+
+if (!$connect) {
+    die('Ошибка подключения к БД: ' . mysqli_connect_error());
 }
 ?>
 
