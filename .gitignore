@@ -7,8 +7,7 @@ Thumbs.db
 .vscode/
 
 # PHP
-vendor/
-*.log
+#vendor/
 
 # Docker
 *.pid
